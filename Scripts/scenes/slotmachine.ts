@@ -46,8 +46,9 @@ module scenes {
             this.addChild(this._backgroundImage);
             
             // add StartOverButton to the scene
-            this._startOverButton = new objects.Button("StartOverButton", 68, 382, false);
+            this._startOverButton = new objects.Button("StartOverButton", 100, 382, false);
             this.addChild(this._startOverButton);
+            this._startOverButton.on("click", this._startOverButtonClick, this);
             
             // add Bet1Button to the scene
             this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
@@ -281,6 +282,11 @@ module scenes {
         }
         
         //EVENT HANDLERS ++++++++++++++++++++
+        private _startOverButtonClick(event: createjs.MouseEvent): void {
+            console.log("Starting over");
+            this._resetAll();
+            
+        }
         
         private _bet1ButtonClick(event: createjs.MouseEvent): void {
             console.log("Bet 1 Credit");
