@@ -39,9 +39,15 @@ module scenes {
             // Reset the Game to initial values 
             this._resetAll();
             
+
+            
             // add background image to the scene
             this._backgroundImage = new createjs.Bitmap(assets.getResult("SlotMachine"));
             this.addChild(this._backgroundImage);
+            
+            // add StartOverButton to the scene
+            this._startOverButton = new objects.Button("StartOverButton", 68, 382, false);
+            this.addChild(this._startOverButton);
             
             // add Bet1Button to the scene
             this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
@@ -62,7 +68,8 @@ module scenes {
             this._spinButton = new objects.Button("SpinButton", 402, 382, false);
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this); 
-        
+            
+                   
             // add JackPot Text to the scene
             this._jackpotText = new objects.Label(
                 this.jackpot.toString(),
