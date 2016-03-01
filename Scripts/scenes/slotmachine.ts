@@ -8,7 +8,7 @@ module scenes {
         private _bet100Button: objects.Button;
         private _spinButton: objects.Button;
         private _startOverButton: objects.Button;
-        private _quitButton: objects.Button
+        private _quitButton: objects.Button;
         private _reels: createjs.Bitmap[];
         private _jackpotText: objects.Label;
         private _creditsText: objects.Label;
