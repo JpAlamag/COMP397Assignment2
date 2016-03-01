@@ -44,11 +44,7 @@ module scenes {
             // add background image to the scene
             this._backgroundImage = new createjs.Bitmap(assets.getResult("SlotMachine"));
             this.addChild(this._backgroundImage);
-            
-            // add StartOverButton to the scene
-            this._startOverButton = new objects.Button("StartOverButton", 100, 382, false);
-            this.addChild(this._startOverButton);
-            this._startOverButton.on("click", this._startOverButtonClick, this);
+
             
             // add Bet1Button to the scene
             this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
@@ -69,6 +65,8 @@ module scenes {
             this._spinButton = new objects.Button("SpinButton", 402, 382, false);
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this); 
+            
+            // add startOverButton to the scene
             
                    
             // add JackPot Text to the scene
@@ -282,11 +280,7 @@ module scenes {
         }
         
         //EVENT HANDLERS ++++++++++++++++++++
-        private _startOverButtonClick(event: createjs.MouseEvent): void {
-            console.log("Starting over");
-            this._resetAll();
-            
-        }
+
         
         private _bet1ButtonClick(event: createjs.MouseEvent): void {
             console.log("Bet 1 Credit");
