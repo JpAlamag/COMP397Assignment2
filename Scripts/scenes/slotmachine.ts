@@ -283,7 +283,7 @@ module scenes {
         }
         
         //EVENT HANDLERS ++++++++++++++++++++
-        private _startOverBUttonClick(event: createjs.MouseEvent): void {
+        private _startOverButtonClick(event: createjs.MouseEvent): void {
             console.log("Resetting values");
             this._resetAll();
         }
