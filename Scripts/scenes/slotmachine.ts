@@ -7,6 +7,7 @@ module scenes {
         private _bet10Button: objects.Button;
         private _bet100Button: objects.Button;
         private _spinButton: objects.Button;
+        private _startOverButton: objects.Button;
         private _reels: createjs.Bitmap[];
         private _jackpotText: objects.Label;
         private _creditsText: objects.Label;
@@ -42,6 +43,10 @@ module scenes {
             // add background image to the scene
             this._backgroundImage = new createjs.Bitmap(assets.getResult("SlotMachine"));
             this.addChild(this._backgroundImage);
+            
+            // add startOverButton to the scene
+            this._startOverButton = new objects.Button("StartOverButton", 100, 382, false)
+            this.addChild(this._startOverButton);
 
             
             // add Bet1Button to the scene
