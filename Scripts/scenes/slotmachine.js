@@ -223,8 +223,9 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         SlotMachine.prototype._startOverButtonClick = function (event) {
             console.log("Resetting values");
-            this._resetAll();
-        };  
+            scene = config.Scene.SLOT_MACHINE;
+            changeScene();
+        };
         SlotMachine.prototype._bet1ButtonClick = function (event) {
             console.log("Bet 1 Credit");
             this._placeBet(1);

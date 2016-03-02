@@ -285,7 +285,8 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         private _startOverButtonClick(event: createjs.MouseEvent): void {
             console.log("Resetting values");
-            this._resetAll();
+            scene = config.Scene.SLOT_MACHINE;
+            changeScene();
 
         }
         
