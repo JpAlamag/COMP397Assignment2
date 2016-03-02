@@ -31,6 +31,7 @@ var scenes;
             // add startOverButton to the scene
             this._startOverButton = new objects.Button("StartOverButton", 25, 382, false)
             this.addChild(this._startOverButton);
+            this._startOverButton.on("click", this._startOverButton.on, this);
             // add Bet1Button to the scene
             this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
             this.addChild(this._bet1Button);
@@ -227,7 +228,7 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         SlotMachine.prototype._startOverButtonClick = function (event) {
             console.log("Resetting values");
-            scene = config.Scene.MENU;
+            scene = config.Scene.SLOT_MACHINE;
             changeScene();
         };
         SlotMachine.prototype._bet1ButtonClick = function (event) {
