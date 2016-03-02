@@ -309,8 +309,8 @@ module scenes {
         
         private _quitButtonClick(event: createjs.MouseEvent): void {
             console.log("Quitting");
-            scene = config.Scene.MENU;
-                changeScene();
+            scene = config.Scene.GAME_OVER;
+            changeScene();
         }
         
 

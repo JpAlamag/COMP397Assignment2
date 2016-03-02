@@ -243,7 +243,7 @@ var scenes;
         };
         SlotMachine.prototype._quitButtonClick = function (event) {
             console.log("Quitting");
-            scene = config.Scene.MENU;
+            scene = config.Scene.GAME_OVER;
             changeScene();     
         };
         SlotMachine.prototype._spinButtonClick = function (event) {
