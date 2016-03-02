@@ -48,7 +48,7 @@ var scenes;
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this);
             // add QuitButton to the scene
-            this._quitButton = new objects.Button("QuitButton", 510, 382, false);
+            this._quitButton = new objects.Button("QuitButton", 515, 382, false);
             this.addChild(this._quitButton);
             // add JackPot Text to the scene
             this._jackpotText = new objects.Label(this.jackpot.toString(), "14px Consolas", "#ff0000", 353, 107, false);
