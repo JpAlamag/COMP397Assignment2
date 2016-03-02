@@ -228,6 +228,10 @@ var scenes;
         SlotMachine.prototype._startOverButtonClick = function (event) {
             console.log("Resetting values");
             this._resetAll();
+            this.playerMoney = 1000;
+            this.winnings = 0;
+            this.jackpot = 5000;
+            this.playerBet = 0;
         };
         SlotMachine.prototype._bet1ButtonClick = function (event) {
             console.log("Bet 1 Credit");

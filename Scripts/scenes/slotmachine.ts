@@ -289,6 +289,10 @@ module scenes {
         private _startOverButtonClick(event: createjs.MouseEvent): void {
             console.log("Resetting values");
             this._resetAll();
+            this.playerMoney = 1000;
+            this.winnings = 0;
+            this.jackpot = 5000;
+            this.playerBet = 0;
             
         }
         
