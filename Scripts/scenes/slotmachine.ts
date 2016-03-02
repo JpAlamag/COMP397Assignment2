@@ -8,6 +8,7 @@ module scenes {
         private _bet100Button: objects.Button;
         private _spinButton: objects.Button;
         private _startOverButton: objects.Button;
+        private _quitButton: objects.Button;
         private _reels: createjs.Bitmap[];
         private _jackpotText: objects.Label;
         private _creditsText: objects.Label;
@@ -48,7 +49,6 @@ module scenes {
             this._startOverButton = new objects.Button("StartOverButton", 25, 382, false)
             this.addChild(this._startOverButton);
 
-            
             // add Bet1Button to the scene
             this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
             this.addChild(this._bet1Button);
@@ -69,7 +69,9 @@ module scenes {
             this.addChild(this._spinButton);
             this._spinButton.on("click", this._spinButtonClick, this); 
             
-            // add startOverButton to the scene
+            // add QuitButton to the scene
+            this._quitButton = new objects.Button("QuitButton", 615, 382, false);
+            this.addChild(this._quitButton);
             
                    
             // add JackPot Text to the scene
@@ -286,8 +288,7 @@ module scenes {
         private _startOverButtonClick(event: createjs.MouseEvent): void {
             console.log("Resetting values");
             this._resetAll();
-
-
+            
         }
         
         private _bet1ButtonClick(event: createjs.MouseEvent): void {
