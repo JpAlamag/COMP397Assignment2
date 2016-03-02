@@ -221,6 +221,11 @@ var scenes;
             }
         };
         //EVENT HANDLERS ++++++++++++++++++++
+        SlotMachine.prototype._startOverButtonClick = function (event) {
+            console.log("Resetting values");
+            this._resetAll();
+        }
+        
         SlotMachine.prototype._bet1ButtonClick = function (event) {
             console.log("Bet 1 Credit");
             this._placeBet(1);
