@@ -29,7 +29,7 @@ var scenes;
             this._backgroundImage = new createjs.Bitmap(assets.getResult("SlotMachine"));
             this.addChild(this._backgroundImage);
             // add startOverButton to the scene
-            this._startOverButton = new objects.Button("StartOverButton", 0, 382, false)
+            this._startOverButton = new objects.Button("StartOverButton", 25, 382, false)
             this.addChild(this._startOverButton);
             // add Bet1Button to the scene
             this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
@@ -224,8 +224,7 @@ var scenes;
         SlotMachine.prototype._startOverButtonClick = function (event) {
             console.log("Resetting values");
             this._resetAll();
-        }
-        
+        };  
         SlotMachine.prototype._bet1ButtonClick = function (event) {
             console.log("Bet 1 Credit");
             this._placeBet(1);
