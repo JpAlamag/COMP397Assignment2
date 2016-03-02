@@ -31,7 +31,7 @@ var scenes;
             // add startOverButton to the scene
             this._startOverButton = new objects.Button("StartOverButton", 25, 382, false)
             this.addChild(this._startOverButton);
-            this._startOverButton.on("click", this._startOverButton.on, this);
+            this._startOverButton.on("click", this._startOverButtonClick, this);
             // add Bet1Button to the scene
             this._bet1Button = new objects.Button("Bet1Button", 168, 382, false);
             this.addChild(this._bet1Button);
