@@ -45,7 +45,7 @@ module scenes {
             this.addChild(this._backgroundImage);
             
             // add startOverButton to the scene
-            this._startOverButton = new objects.Button("StartOverButton", 100, 382, false)
+            this._startOverButton = new objects.Button("StartOverButton", 0, 382, false)
             this.addChild(this._startOverButton);
 
             
