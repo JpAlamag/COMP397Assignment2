@@ -70,7 +70,7 @@ module scenes {
             this._spinButton.on("click", this._spinButtonClick, this); 
             
             // add QuitButton to the scene
-            this._quitButton = new objects.Button("QuitButton", 500, 382, false);
+            this._quitButton = new objects.Button("QuitButton", 525, 382, false);
             this.addChild(this._quitButton);
             
                    
