@@ -72,6 +72,7 @@ module scenes {
             // add QuitButton to the scene
             this._quitButton = new objects.Button("QuitButton", 515, 382, false);
             this.addChild(this._quitButton);
+            this._quitButton.on("click", this._quitButtonClick, this);
             
                    
             // add JackPot Text to the scene
@@ -305,6 +306,13 @@ module scenes {
             console.log("Bet 100 Credit");
             this._placeBet(100);
         }
+        
+        private _quitButtonClick(event: createjs.MouseEvent): void {
+            console.log("Quitting");
+            scene = config.Scene.MENU;
+                changeScene();
+        }
+        
 
         private _spinButtonClick(event: createjs.MouseEvent): void {
             // ensure player has enough money to play

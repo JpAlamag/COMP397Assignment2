@@ -50,6 +50,7 @@ var scenes;
             // add QuitButton to the scene
             this._quitButton = new objects.Button("QuitButton", 515, 382, false);
             this.addChild(this._quitButton);
+            this._quitButton.on("click", this._quitButtonClick, this);
             // add JackPot Text to the scene
             this._jackpotText = new objects.Label(this.jackpot.toString(), "14px Consolas", "#ff0000", 353, 107, false);
             this._jackpotText.textAlign = "right";
@@ -239,6 +240,11 @@ var scenes;
         SlotMachine.prototype._bet100ButtonClick = function (event) {
             console.log("Bet 100 Credit");
             this._placeBet(100);
+        };
+        SlotMachine.prototype._quitButtonClick = function (event) {
+            console.log("Quitting");
+            scene = config.Scene.MENU;
+            changeScene();     
         };
         SlotMachine.prototype._spinButtonClick = function (event) {
             // ensure player has enough money to play
